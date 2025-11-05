@@ -131,6 +131,7 @@ export const App: React.FC = () => {
         isLoading={isModalLoading}
         onClose={() => {
           setSelectedTodoId(null);
+          setSelectedUser(null);
         }}
         todo={selectedTodo}
         user={selectedUser}

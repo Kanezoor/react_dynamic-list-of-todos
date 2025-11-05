@@ -33,7 +33,11 @@ export const TodoList: React.FC<Props> = ({
           const isSelected = todo.id === selectedTodoId;
 
           return (
-            <tr data-cy="todo" className="" key={todo.id}>
+            <tr
+              data-cy="todo"
+              className={classnames({ 'is-selected': isSelected })}
+              key={todo.id}
+            >
               <td className="is-vcentered">{todo.id}</td>
               {todo.completed ? (
                 <td className="is-vcentered">
